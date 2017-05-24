@@ -1,6 +1,6 @@
 {
   "name": "dzer/mllphp",
-  "description": "mll framework",
+  "description": "mll framework Project Template",
   "type": "project",
   "keywords": [
     "framework",
@@ -16,7 +16,8 @@
     }
   ],
   "require": {
-    "php": ">=5.4.0"
+    "php": ">=5.4.0",
+    "dzer/mll-framework": "dev-master"
   },
   "extra": {
     "mllphp-path": "mllphp"
