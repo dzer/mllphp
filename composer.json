@@ -1,0 +1,28 @@
+{
+  "name": "dzer/mllphp",
+  "description": "mll framework",
+  "type": "project",
+  "keywords": [
+    "framework",
+    "mllphp"
+  ],
+  "homepage": "http://www.meilele.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "dzer",
+      "email": "d20053140@gmail.com",
+      "homepage": "https://dzer.me"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+    //"dzer/mll-framework": "*"
+  },
+  "extra": {
+    "think-path": "mllphp"
+  },
+  "config": {
+    "preferred-install": "dist"
+  }
+}
