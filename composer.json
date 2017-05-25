@@ -20,7 +20,7 @@
     "dzer/mll-framework": "dev-master"
   },
   "extra": {
-    "mllphp-path": "mllphp"
+    "mll-path": "mllphp"
   },
   "config": {
     "preferred-install": "dist"
