@@ -17,8 +17,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "dzer/mll-framework": "dev-master",
-    "filp/whoops": "^2.1"
+    "dzer/mll-framework": "dev-master"
   },
   "extra": {
     "mll-path": "mllphp"
