@@ -1,6 +1,6 @@
 <?php
 return [
-    'param' => [
+    'params' => [
         'hehe' => 'dfdf'
     ]
 ];
