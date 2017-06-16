@@ -1,7 +1,10 @@
 <?php
+
 namespace app\index\controller;
 
-class Index
+use Mll\Controller\IController;
+
+class Index implements IController
 {
     public function index()
     {

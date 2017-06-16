@@ -7,6 +7,7 @@ return [
     'app_debug' => true,
     //时区
     'time_zone' => 'Asia/Shanghai',
+    'view_mode' => 'php',
 
     'request' => [
         'driver' => 'http',
@@ -20,7 +21,10 @@ return [
             // 默认操作名
             'default_action' => 'index',
             //兼容pathInfo
-            'path_info_var' => 'r'
+            'path_info_var' => 'r',
+            // 表单请求类型伪装变量
+            'var_method'             => '_method',
+
         ],
     ],
 
@@ -39,12 +43,6 @@ return [
             'level' => 'all', //默认所有，或者逗号隔开warning,error
             'separator' => ' | ', //分隔符
             'suffix' => '.log', //日志文件后缀
-        ]
-    ],
-    'request' => [
-        'driver' => 'http',
-        'http' => [
-
         ]
     ],
 ];
