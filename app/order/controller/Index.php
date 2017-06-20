@@ -10,7 +10,6 @@ class Index extends Controller
 {
     public function index()
     {
-        //
         return $this->json(array('error' => 0, 'message' => '成功'));
     }
 }
