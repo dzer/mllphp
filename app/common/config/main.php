@@ -13,9 +13,9 @@ return [
         'driver' => 'http',
         'http' => [
             // 默认模块名
-            'default_module' => 'index',
+            'default_module' => 'goods',
             // 禁止访问模块
-            'deny_module_list' => ['config'],
+            'deny_module_list' => ['common'],
             // 默认控制器名
             'default_controller' => 'Index',
             // 默认操作名
