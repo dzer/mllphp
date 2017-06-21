@@ -1,6 +1,6 @@
 <?php
 return array(
-    'cache' => array(
+    /*'cache' => array(
         'mll' => array('host' => 'memcache.meilele.com', 'host_name' => 'www.meilele.com', 'port' => 11211),
         'store' => array('host' => 'memcache.meilele.com', 'host_name' => 'www.meilele.com', 'port' => 11215),
         'code' => array('host' => 'codememc.meilele.com', 'host_name' => 'code.meilele.com', 'port' => 11210),
@@ -15,5 +15,5 @@ return array(
         'ipad' => array('host' => 'ipadmemcache.meilele.com', 'host_name' => 'ipadmemcache.meilele.com', 'port' => 11219),
         'erp' => array('host' => 'ipadmemcache.meilele.com', 'host_name' => 'ipadmemcache.meilele.com', 'port' => 11219),
         'product' => array('host' => 'ipadmemcache.meilele.com', 'host_name' => 'ipadmemcache.meilele.com', 'port' => 11219)
-    )
+    )*/
 );

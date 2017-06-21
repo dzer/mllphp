@@ -50,4 +50,61 @@ return [
             'host' => 'http://mllphp.com/rpc.php'
         ],
     ],
+
+    'cache' => [
+        'default' =>[
+            'driver' => 'memcache',
+            'default' => [
+                'host' => 'memcache.meilele.com ',
+                'port' => 11211,
+                'prefix' => '',
+                'persistent' => true,
+                'expire'     => 0,
+                'timeout'    => 0, // 超时时间（单位：毫秒）
+            ]
+        ],
+        'memcache' => [
+            'driver' => 'memcache',
+            'code' => [
+                'host' => 'codememc.meilele.com',
+                'port' => 11210
+            ],
+            'zx' => [
+                'host' => 'zxmemcache.meilele.com',
+                'port' => 11213
+            ],
+        ],
+        'file' => [
+            'driver' => 'file',
+            'file' => [
+                'expire'        => 0,
+                'cache_subdir'  => true,
+                'prefix'        => '',
+                'path'          => '/runtime/temp/cache',
+                'data_compress' => false,
+            ]
+        ],
+    ],
+    'session' => [
+        'driver' => 'memcache',
+        'auto_start' => 1,
+        'prefix' => '',
+        'var_session_id' => '',
+        //'name' => '',
+        'path' => '',
+        'domain' => '',
+        'expire' => '',
+        'use_cookies' => '',
+        'cache_limiter' => '',
+        'cache_expire' => '',
+        'driver_config' => [
+            'host'         => 'memcache.meilele.com', // memcache主机
+            'port'         => 11211, // memcache端口
+            'expire'       => 3600, // session有效期
+            'timeout'      => 0, // 连接超时时间（单位：毫秒）
+            'persistent'   => true, // 长连接
+            'session_name' => '', // memcache key前缀
+        ]
+    ]
+
 ];
