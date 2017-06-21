@@ -10,6 +10,11 @@ class Index extends Controller
 {
     public function index()
     {
-        return $this->json(array('error' => 0, 'message' => '成功'));
+        return $this->json(array('get' => $_GET));
+    }
+
+    public function index2()
+    {
+        return $this->json(array('post' => $_POST['r']));
     }
 }

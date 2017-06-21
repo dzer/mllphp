@@ -24,7 +24,6 @@ return [
             'path_info_var' => 'r',
             // 表单请求类型伪装变量
             'var_method'             => '_method',
-
         ],
     ],
 
@@ -43,6 +42,12 @@ return [
             'level' => 'all', //默认所有，或者逗号隔开warning,error
             'separator' => ' | ', //分隔符
             'suffix' => '.log', //日志文件后缀
-        ]
+        ],
+    ],
+    'rpc' => [
+        'driver' => 'yar',
+        'yar' => [
+            'host' => 'http://mllphp.com/rpc.php'
+        ],
     ],
 ];
