@@ -47,7 +47,9 @@ return [
     'rpc' => [
         'driver' => 'yar',
         'yar' => [
-            'host' => 'http://mllphp.com/rpc.php'
+            'host' => 'http://mllphp.com/rpc.php',
+            'connect_timeout' => 2,    //连接超时
+            'timeout' => 10,    //响应超时
         ],
     ],
 
