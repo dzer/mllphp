@@ -4,10 +4,14 @@
  */
 return [
     //是否开启调试模式
-    'app_debug' => true,
+    'app_debug' => false,
     //时区
     'time_zone' => 'Asia/Shanghai',
     'view_mode' => 'php',
+
+    'params' => [
+        'rule_url' => 'sssss',
+    ],
 
     'request' => [
         'driver' => 'http',
@@ -23,8 +27,22 @@ return [
             //兼容pathInfo
             'path_info_var' => 'r',
             // 表单请求类型伪装变量
-            'var_method'             => '_method',
+            'var_method' => '_method',
+            //缓存服务器
+            'cache_server' => 'code',
+            //请求唯一key
+            'request_id_key' => 'x-request-id',
+            //请求时间key
+            'request_time_key' => 'x-request-time',
         ],
+        'rpc' => [
+            //缓存服务器
+            'cache_server' => 'code',
+            //请求唯一key
+            'request_id_key' => 'x-request-id',
+            //请求时间key
+            'request_time_key' => 'x-request-time',
+        ]
     ],
 
     'exception' => [
@@ -34,25 +52,35 @@ return [
         'error_message' => '系统繁忙,请稍后再试', //错误提示
     ],
     'log' => [
-        'driver' => 'file',
+        'driver' => 'cache',
         'file' => [
-            'time_format' => 'c', //ISO 8601 格式的日期
+            'time_format' => 'Y-m-d H:i:s', //ISO 8601 格式的日期
             'file_size' => 2097152, //文件大小
             'path' => '/runtime/log', //报错日志路径
             'level' => 'all', //默认所有，或者逗号隔开warning,error
             'separator' => ' | ', //分隔符
             'suffix' => '.log', //日志文件后缀
         ],
+        'cache' => [
+            'time_format' => 'Y-m-d H:i:s', //格式的日期
+            'cache_server' => 'code',   //缓存服务器
+            'queue_name' => 'mll_log_queue', //缓存队列名
+            'expire' => 600,    //过期时间
+            'level' => 'all', //默认所有，或者逗号隔开warning,error
+        ]
+    ],
+    'xhprof' => [
+        'enable' => true,
+        'path' => '/extend/xhprof',
     ],
     'rpc' => [
         'driver' => 'yar',
         'yar' => [
             'host' => 'http://mllphp.com/rpc.php',
-            'connect_timeout' => 2,    //连接超时
-            'timeout' => 10,    //响应超时
+            'connect_timeout' => 1,    //连接超时
+            'timeout' => 2,    //响应超时
         ],
     ],
-
     'cache' => [
         'default' =>[
             'driver' => 'memcache',
@@ -65,16 +93,10 @@ return [
                 'timeout'    => 0, // 超时时间（单位：毫秒）
             ]
         ],
-        'memcache' => [
+        'code' => [
             'driver' => 'memcache',
-            'code' => [
-                'host' => 'codememc.meilele.com',
-                'port' => 11210
-            ],
-            'zx' => [
-                'host' => 'zxmemcache.meilele.com',
-                'port' => 11213
-            ],
+            'host' => '192.168.31.169',
+            'port' => 11211
         ],
         'file' => [
             'driver' => 'file',
