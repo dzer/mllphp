@@ -11,6 +11,14 @@ class Index extends Controller
 {
     public function index()
     {
+        return $this->json([
+            'error' => 0,
+            'msg' => 'mll-framework',
+        ]);
+    }
+
+    public function demo()
+    {
         //1、常用组件调用rpc rule curl 缓存
         //2、请求自动缓存 SOURCE_CACHE_TIME
         //3、静态路由和动态路由
