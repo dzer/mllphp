@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="{$seo_info.keywords}" />
+    <meta name="description" content="{$seo_info.description}" />
+    <title>试试222</title>
+    <link rel="icon" href="{$IMG}/favicon.ico" />
+    <link rel="stylesheet" href="{$RES}??/mll/mpg/article/article.min.css" type="text/css" />
+    <base target="_blank" />
+    <style type="text/css">
+        .headNav{display: none}
+    </style>
+</head>
+<body class="root_body">
+1122334455
+<ul>
+    <li>
+        <a href="{$url}">
+            <img src="{$src|mllthumb:810:442}" title="{$item.desc|truncate:30}" width="810" height="442" />
+            <img src="{$src|mllthumb:810:442}" title="{$item.desc|truncate:30}" width="810" height="442" />
+            <img src="{$src|mllthumb:810:442}" title="{$item.desc|truncate:30}" width="810" height="442" />
+        </a>
+    </li>
+    dsafasfd11222456112111
+</ul>
+
+</body>
+
+</html>

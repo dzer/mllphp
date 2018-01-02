@@ -14,6 +14,11 @@ return [
         'enable' => false,
         'path' => '/extend/xhprof',
     ],
+    'view' => [
+        'driver' => 'Smarty',
+        'template_dir' => '/template', //模板目录
+        'compile_dir' => '/runtime/temp/template_compile', //编译目录
+    ],
     //request
     'request' => [
         'driver' => 'http',
@@ -50,7 +55,7 @@ return [
     ],
     'db' => [
         'mongo' => [
-            'dsn' => 'mongodb://192.168.2.214:27017', //服务器地址
+            'dsn' => 'mongodb://192.168.3.92:27017', //服务器地址
             'option' => [
                 'connect' => true, //参数
                 'db_name' => 'system_log', //数据库名称
@@ -58,6 +63,15 @@ return [
                 'password' => '', //数据库密码
             ]
         ]
+    ],
+    'res_server_host' => '//st.mllres.com',
+    //资源服务器 注意不要最后的斜杠
+    'source_server_host' => [
+        'http://images.meilele.com',
+        'http://imgs001.mllres.com',
+        'http://imgs002.mllres.com',
+        'http://imgs003.mllres.com',
+        'http://imgs004.mllres.com'
     ],
     //异常处理
     'exception' => [
@@ -97,34 +111,34 @@ return [
     'rule_cache' => 'rule',
     //缓存
     'cache' => [
-        'default' =>[
+        'default' => [
             'driver' => 'memcache',
             'default' => [
                 'host' => 'memcache.meilele.com ',
                 'port' => 11211,
                 'prefix' => '',
                 'persistent' => true,
-                'expire'     => 0,
-                'timeout'    => 0, // 超时时间（单位：毫秒）
+                'expire' => 0,
+                'timeout' => 0, // 超时时间（单位：毫秒）
             ]
         ],
         'code' => [
             'driver' => 'memcache',
-            'host' => 'memcache.meilele.com',
+            'host' => '192.168.0.250',
             'port' => 11211
         ],
         'rule' => [
             'driver' => 'memcache',
-            'host' => 'memcache.meilele.com',
+            'host' => '192.168.0.250',
             'port' => 11211
         ],
         'file' => [
             'driver' => 'file',
             'file' => [
-                'expire'        => 0,
-                'cache_subdir'  => true,
-                'prefix'        => '',
-                'path'          => '/runtime/temp/cache',
+                'expire' => 0,
+                'cache_subdir' => true,
+                'prefix' => '',
+                'path' => '/runtime/temp/cache',
                 'data_compress' => false,
             ]
         ],
@@ -142,11 +156,11 @@ return [
         'cache_limiter' => '',
         'cache_expire' => '',
         'driver_config' => [
-            'host'         => 'memcache.meilele.com', // memcache主机
-            'port'         => 11211, // memcache端口
-            'expire'       => 3600, // session有效期
-            'timeout'      => 0, // 连接超时时间（单位：毫秒）
-            'persistent'   => true, // 长连接
+            'host' => 'memcache.meilele.com', // memcache主机
+            'port' => 11211, // memcache端口
+            'expire' => 3600, // session有效期
+            'timeout' => 0, // 连接超时时间（单位：毫秒）
+            'persistent' => true, // 长连接
             'session_name' => '', // memcache key前缀
         ]
     ]
